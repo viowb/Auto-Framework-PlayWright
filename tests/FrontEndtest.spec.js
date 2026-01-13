@@ -23,3 +23,11 @@ test('Home Page Playwright Test', async ({ page }) => {
 });
 
 //'Joint Investment Ltd.|UK PROPERTY INVESTMENT'
+
+
+test('Login Page Playwright Test', async ({ page }) => {
+  await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
+   
+
+  await expect(page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
+});
