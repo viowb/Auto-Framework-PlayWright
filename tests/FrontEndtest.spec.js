@@ -1,4 +1,5 @@
 const {test, expect} = require('@playwright/test');
+const { error } = require('node:console');
 
 
 test('Browser Context Playwright Test ', async ({browser}) => 
@@ -22,12 +23,10 @@ test('Home Page Playwright Test', async ({ page }) => {
   
 });
 
-//'Joint Investment Ltd.|UK PROPERTY INVESTMENT'
-
-
 test('Login Page Playwright Test', async ({ page }) => {
   await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
-   
-
   await expect(page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
+  await page.locator('#username').fill('viowbank@gmail.com');
+  await page.locator('#password').fill('T5yhhgdjsdkls;');
+  await page.locator('#signInBtn').click();
 });
