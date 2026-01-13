@@ -14,3 +14,9 @@ test('Page Playwright Test ', async ({page}) =>
 
      await page.goto("https://google.com");
 });
+
+test('About Page Playwright Test ', async ({page}) => 
+{
+
+await page.goto("https://www.jointinv.com/About");
+});
