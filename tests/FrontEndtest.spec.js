@@ -19,4 +19,8 @@ test('About Page Playwright Test ', async ({page}) =>
 {
 
 await page.goto("https://www.jointinv.com/About");
+await expect(page).toHaveTitle(/About/);
+await expect(page.locator('h1')).toHaveText('About Us');
 });
+
+
