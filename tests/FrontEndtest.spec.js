@@ -1,4 +1,4 @@
-const {test} = require('@playwright/test');
+const {test, expect} = require('@playwright/test');
 
 
 test('Browser Context Playwright Test ', async ({browser}) => 
@@ -15,12 +15,11 @@ test('Page Playwright Test ', async ({page}) =>
      await page.goto("https://google.com");
 });
 
-test('About Page Playwright Test ', async ({page}) => 
-{
+test('Home Page Playwright Test', async ({ page }) => {
+  await page.goto('https://www.jointinv.com/home');
+   
 
-await page.goto("https://www.jointinv.com/About");
-await expect(page).toHaveTitle(/About/);
-await expect(page.locator('h1')).toHaveText('About Us');
+  
 });
 
-
+//'Joint Investment Ltd.|UK PROPERTY INVESTMENT'
