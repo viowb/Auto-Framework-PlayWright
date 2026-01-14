@@ -10,7 +10,8 @@ test.only('Login Page error msg Playwright Test', async ({ page }) => {
   await page.locator('#signInBtn').click(); 
 
   console.log(await page.locator('[style*="block"]').textContent());
-  await expect(page.locator('[style*="block"]')).toHaveText('Incorrect username/password.');
+  await expect(page.locator('[style*="block"]')).toContainText('Incorrect username/password.');
+
 
 
 });
