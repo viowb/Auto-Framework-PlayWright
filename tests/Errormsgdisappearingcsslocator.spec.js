@@ -12,6 +12,11 @@ test.only('Login Page error msg Playwright Test', async ({ page }) => {
   console.log(await page.locator('[style*="block"]').textContent());
   await expect(page.locator('[style*="block"]')).toContainText('Incorrect username/password.');
 
+   await userName.fill("");
+  await userName.fill("viowbank@gmail.com");
+  await password.fill("");
 
+  await password.fill("T5yhhgdjsdkls;");
+  await signInBtn.click();
 
 });
