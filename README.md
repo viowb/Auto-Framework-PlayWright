@@ -169,6 +169,16 @@ flowchart LR
     hotfix --> main
     hotfix --> develop
 
+    | Branch      | Purpose               |
+| ----------- | --------------------- |
+| `main`      | Production-ready code |
+| `develop`   | Ongoing integration   |
+| `feature/*` | New features          |
+| `bugfix/*`  | Bug fixes             |
+| `release/*` | Pre-production        |
+| `hotfix/*`  | Emergency fixes       |
+
+
 
 🤝 Contributing
 
