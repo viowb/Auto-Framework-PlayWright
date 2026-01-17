@@ -155,6 +155,20 @@ GitLab CI
 Azure DevOps
 
 (Example GitHub Actions workflow can be added if needed.)
+flowchart LR
+    main[main<br/>(production)]
+    develop[develop<br/>(integration)]
+    feature[feature/*<br/>(new work)]
+    release[release/*<br/>(stabilization)]
+    hotfix[hotfix/*<br/>(urgent fixes)]
+
+    feature --> develop
+    develop --> release
+    release --> main
+    main --> develop
+    hotfix --> main
+    hotfix --> develop
+
 
 🤝 Contributing
 
