@@ -154,7 +154,7 @@ GitLab CI
 
 Azure DevOps
 
-(Example GitHub Actions workflow can be added if needed.)
+GitHub Actions workflow 
 flowchart LR
     main[main<br/>(production)]
     develop[develop<br/>(integration)]
