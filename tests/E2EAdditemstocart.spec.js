@@ -24,7 +24,7 @@ test('E2E sign in-print cardtitles Playwright Test', async ({ page }) => {
 }); 
 
 
-test.only('Add to Cart Playwright Test', async ({ page }) => {
+test('Add to Cart Playwright Test', async ({ page }) => {
   await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
   const email = "viowbank@gmail.com";
   await page.locator('#userEmail').fill(email);
@@ -107,10 +107,13 @@ await submitBtn.click({ force: true });
 await page.waitForTimeout(2000);
 await page.waitForLoadState("networkidle");
 console.log("Current URL after submit:", await page.url());
+await page.pause();
+
 // Verify confirmation message
 
   
 // Read order id after confirmation text appears
+
 
 
 
@@ -122,6 +125,8 @@ console.log("Current URL after submit:", await page.url());
 
   
   //select order history page and verify order id
+  //iterate through rows and find matching order id
+
 
 //test('Order History Playwright Test', async ({ page }) => {
   //await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
