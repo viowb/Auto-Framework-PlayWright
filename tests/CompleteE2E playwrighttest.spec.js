@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.only("Place order for Adidas product", async ({ page }) => {
+test("Place order for Adidas product", async ({ page }) => {
   // Login (required for this site)
   await page.goto("https://rahulshettyacademy.com/client");
   const email = "viowbank@gmail.com";
