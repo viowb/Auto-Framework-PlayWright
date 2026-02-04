@@ -27,6 +27,33 @@ await framePage.locator("a[href*='lifetime-access']:visible").click();
 const text = await framePage.locator(".text h2").textContent();
 console.log(text);
 
+});
+
+test("Screenshot & visual checks test",async({page})=>
+{
+await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+await page.locator("#hide-textbox").isHidden();
+await page.locator("#displayed-text").isVisible();
+//screenshot
+await page.screenshot({path:"screenshot.png",fullPage:true});
+
 
 
 });
+//locator level screenshot
+test("Locator screenshot test",async({page})=>
+{
+await page.goto("https://rahulshettyacademy.com/AutomationPractice/"); 
+await page.locator('#displayed-text').screenshot({path:'locatorlevelscreenshot.png'});
+await page.locator("#hide-textbox").isHidden();
+await page.locator("#displayed-text").isVisible();
+});
+
+test("visual comparison test",async({page})=>
+{
+await page.goto("https://www.jointinv.com/home");
+//visual comparison
+await expect(page).toHaveScreenshot("homepage.png");
+expect(await page.screenshot()).toMatchSnapshot("homepage.png");
+});
+
