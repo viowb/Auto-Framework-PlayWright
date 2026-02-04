@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.describe.only("Web API 1 tests", () => {
+test.describe("Web API 1 tests", () => {
 
   let token; // store token for all tests in this describe
 
