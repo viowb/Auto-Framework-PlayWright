@@ -6,6 +6,10 @@ export class LoginPage
     readonly password: Locator;
     readonly signInbutton: Locator;   
    
+#constructor is a function that is called when an instance of the class is created. 
+#It is used to initialize the properties of the class and set up any necessary configurations. 
+#In this case, the constructor takes a Page object as an argument and initializes the locators for the username, password, and sign-in button on the login page.
+    
     constructor(page: Page) 
     {
         
@@ -14,16 +18,16 @@ export class LoginPage
         this.password = page.locator("#userPassword");
         this.signInbutton = page.locator("#login");
 
-
     }
 
-    async goTo()
-    {
+    #create the action methods
+    async goToLoginPage(){
         await this.page.goto("https://rahulshettyacademy.com/client");
-    }
+     
 
-    async validLogin(username,password)
-    {
+    }
+    
+    async Login(username,password){
         await this.userName.fill(username);
         await this.password.fill(password); 
         await this.signInbutton.click();
@@ -31,5 +35,6 @@ export class LoginPage
 
     }
 
-}
+});
+
 module.exports = { LoginPage };
