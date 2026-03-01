@@ -41,7 +41,9 @@ await page.screenshot({path:"screenshot.png",fullPage:true});
 
 });
 //locator level screenshot
-test("Locator screenshot test",async({page})=>
+
+test.describe.configure({mode:"parallel"});
+test.describe("Locator screenshot test",async({page})=>
 {
 await page.goto("https://rahulshettyacademy.com/AutomationPractice/"); 
 await page.locator('#displayed-text').screenshot({path:'locatorlevelscreenshot.png'});
