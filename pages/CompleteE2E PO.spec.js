@@ -1,8 +1,8 @@
 const { test, expect } = require("@playwright/test");
-const { LoginPage } = require("../pageobjects/LoginPage");
-const { DashboardPageObject} = require("../pageobjects/DashboardPageObject");
-const CheckoutPageObject = require('../pageobjects/CheckoutPageObject'); 
-const { CartPageObject } = require("../pageobjects/CartPageObject");
+const { LoginPage } = require("./LoginPage");
+const { DashboardPageObject} = require("./DashboardPageObject");
+const CheckoutPageObject = require('./CheckoutPageObject'); 
+const { CartPageObject } = require("./CartPageObject");
 
 test('Web Place order for Adidas product', async ({ page }) => {
   // Login page object usage

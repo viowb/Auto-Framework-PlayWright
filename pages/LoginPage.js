@@ -1,14 +1,19 @@
-class LoginPage 
-    {
-
-    constructor(page) 
+import {page,Locator} from '@playwright/test';
+export class LoginPage
+{
+    readonly page: Page;
+    readonly username: Locator;
+    readonly password: Locator;
+    readonly signInbutton: Locator;   
+   
+    constructor(page: Page) 
     {
         
         this.page = page;
-        this.signInbutton = page.locator("#login");
         this.userName = page.locator("#userEmail");
         this.password = page.locator("#userPassword");
-        
+        this.signInbutton = page.locator("#login");
+
 
     }
 
