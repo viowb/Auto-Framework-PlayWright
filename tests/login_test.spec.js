@@ -1,16 +1,13 @@
-import {test} from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-import { DashboardPageObject} from '../pages/DashboardPageObject';
-import CheckoutPageObject from '../pages/CheckoutPageObject'; 
-import { CartPageObject } from '../pages/CartPageObject';
+import {test} from '@playwright/test'
+import { LoginPage } from '../pages/LoginPage'
 
-test('Web Place order for Adidas product', async ({ page }) => {
-  // Login page object usage
+test('login test', async ({ page }) => {
+ 
     const loginPage = new LoginPage(page);
 
-    loginPage.goToLoginPage();
-    loginPage.login('viowbank@gmail.com', 'T5yhhgdjsdkls;');
-    loginPage.verifyLoginSuccess();
+    await loginPage.goToLoginPage();
+    await loginPage.login('viowbank@gmail.com', 'T5yhhgdjsdkls;');
+    await loginPage.verifyLoginSuccess();
 
 
 });
